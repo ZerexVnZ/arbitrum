@@ -19,19 +19,18 @@ sleep 3
 
 echo -e "\e[1m\e[32m1. Updating server, cai docker.. \e[0m"
 echo "======================================================"
-sleep 1
 sudo apt update && sudo apt upgrade -y
 sudo apt install docker.io -y
 mkdir -p ~/data/arbitrum
 chmod -fR 777 ~/data/arbitrum
 
 if [ ! $L1URL ]; then
-	read -p "Enter your L1 URL: " L1URL
+	read -p "Link Http Alchemy cua ban: " L1URL
 	echo 'export L1URL='$L1URL >> $HOME/.bash_profile
 fi
 
 
-echo -e "\e[1m\e[32m1. Cai Dat Arbitrum Node.. \e[0m"
+echo -e "\e[1m\e[32m1. Arbitrum node dang duoc cai dat.. \e[0m"
 echo "======================================================"
 sleep 1
 
